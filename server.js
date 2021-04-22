@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 const io = require('socket.io')(3001, {
     cors: {
-        origin: 'https://google-docs-clone.netlify.app/',
+        origin: 'https://clone-front.netlify.app/',
         methods: ['GET', 'POST']
     }
 })
