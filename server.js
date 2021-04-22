@@ -11,7 +11,9 @@ mongoose.connect(process.env.MONGODB_URI, {
     useCreateIndex: true
 });
 
-const io = require('socket.io')(3001, {
+const PORT = process.env.PORT || 3001;
+
+const io = require('socket.io')(PORT, {
     cors: {
         origin: 'https://clone-front.netlify.app/',
         methods: ['GET', 'POST']
